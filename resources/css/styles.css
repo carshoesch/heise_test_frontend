@@ -1,0 +1,97 @@
+/* font-input */
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:ital,wght@0,400;1,800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: "Open Sans", sans-serif;
+	background: #333;
+	background-image: url("https://source.unsplash.com/1600x900/?landscape");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* weather */
+main {
+	display: flex;
+	gap: 40px;
+	width: 80%;
+	height: 80vh;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.weather {
+	flex: 0.4;
+}
+
+.news {
+	flex: 0.6;
+	height: 100%;
+	border: 1px solid red;
+}
+
+.weather-wrapper {
+	background: #000000d0;
+	color: #fff;
+	padding: 2rem;
+	border-radius: 30px;
+	width: 100%;
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
+	padding: 0.5rem;
+}
+
+.input .input-field {
+	border-radius: 20px;
+	border: none;
+	padding: 0.5rem 1rem;
+	background: #7c7c7c2b;
+	color: #fff;
+	width: calc(100% - 40px);
+}
+
+.search-icon {
+	margin: 0.5rem;
+	border-radius: 50%;
+	border: none;
+	height: 40px;
+	width: 40px;
+	background: #7c7c7c2b;
+	cursor: pointer;
+}
+
+.search-icon:hover {
+	background: #7c7c7c6b;
+}
+
+.search-icon svg {
+	fill: #fff;
+}
+
+.headline {
+	color: greenyellow;
+}
+
+/* news */
+
+.load-news-wrapper {
+}
+
+.load-news-wrapper__btn {
+	cursor: pointer;
+}
