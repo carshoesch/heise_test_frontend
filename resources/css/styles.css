@@ -1,6 +1,15 @@
 /* font-input */
 @import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:ital,wght@0,400;1,800&display=swap");
 
+/* variables */
+:root {
+	--default-text-colour: #fff;
+	--header-accent-colour: greenyellow;
+	--weather-actions-bg: #7c7c7c2b;
+	--news-block-bg: #f6f7f8;
+	--news-text-colour: #131d24;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -32,12 +41,6 @@ main {
 
 .weather {
 	flex: 0.4;
-}
-
-.news {
-	flex: 0.6;
-	height: 100%;
-	border: 1px solid red;
 }
 
 .weather-wrapper {
@@ -89,7 +92,25 @@ main {
 
 /* news */
 
-.load-news-wrapper {
+.news {
+	flex: 0.6;
+	padding: 1rem;
+	border-radius: 20px;
+	height: 100%;
+	background-color: var(--news-block-bg);
+}
+
+.news-top-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--news-text-colour);
+	padding-bottom: 0.5rem;
+}
+
+.news-wrapper__headline,
+.load-news-wrapper__btn {
+	color: var(--news-text-colour);
 }
 
 .load-news-wrapper__btn {
