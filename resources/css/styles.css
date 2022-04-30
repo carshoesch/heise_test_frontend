@@ -132,6 +132,7 @@ main {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 1rem;
+	opacity: 0.5;
 }
 
 .news__overview--title {
@@ -139,7 +140,11 @@ main {
 	margin-bottom: 0.5rem;
 }
 
-@media (min-width: 768px) {
+.news__overview--teaser {
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
 	main {
 		flex-direction: row;
 	}
