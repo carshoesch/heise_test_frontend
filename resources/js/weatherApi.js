@@ -91,4 +91,4 @@ const setPosition = (lat, long) => {
 /* function calls */
 window.addEventListener('load', getLocation);
 inputField.addEventListener('keyup', searchWeatherEnter);
-searchBtn.addEventListener('load', fetchWeather);
+searchBtn.addEventListener('click', fetchWeather);
