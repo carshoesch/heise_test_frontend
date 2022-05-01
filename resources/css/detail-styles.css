@@ -1,0 +1,19 @@
+.news-detail {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.news-detail__image {
+	max-width: 100%;
+}
+
+.news-detail__image img {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.news-detail__image {
+		max-width: 750px;
+	}
+}

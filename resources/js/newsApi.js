@@ -1,7 +1,7 @@
 /* variables */
 const baseUrlNews = "https://www.heise.de/extras/frontend/news/"
 const baseUrlNewsLimit= "https://www.heise.de/extras/frontend/news/?limit=";
-const limiter = 10
+const limiter = 5
 const loadNewsBtn = document.getElementById('loadNewsBtn');
 const newsWrapper = document.getElementById('news');
 const newsTileWrapper = document.getElementById('newsTileWrapper');
@@ -26,7 +26,6 @@ const loadNews = () => {
 }
 
 const displayNews = (newsArray) => {
-    console.log('Data: ' + newsArray);
 
     if (newsArray.length == 0) {
         newsTileWrapper.innerHTML = '<h5>Keine News vorhanden</h5>'
@@ -35,10 +34,10 @@ const displayNews = (newsArray) => {
         /* TODO: create HTML-Blocks for every news-element within the array */
         newsArray.forEach(news => {
 
-            console.log(JSON.stringify(news));
 
             const title = news.title;
             const fullText = news.synopsis;
+            const imgSrc = news.image.src;
             const dateTime = news.meta.pubDate;
             const date = dateTime.split('T')[0];
             const time = dateTime.split('T')[1].split('+')[0];
@@ -75,7 +74,7 @@ const displayNews = (newsArray) => {
             const detail = document.createElement('a');
             const linkText = document.createTextNode("Mehr erfahren");
             detail.appendChild(linkText);
-            detail.href = baseUrlNews+id;
+            detail.href = "readMore.html?" + 'imageSrc=' + imgSrc + "&content=" + fullText;
             detail.target="_blank";
             newNews.appendChild(detail)
         })
@@ -85,4 +84,4 @@ const displayNews = (newsArray) => {
 
     
 /* function calls */
-loadNewsBtn.addEventListener('click', loadNews);
+window.addEventListener('load', loadNews);
