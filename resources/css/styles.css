@@ -37,7 +37,9 @@ main {
 	border-left: 5px solid lightblue;
 }
 
-.left__headline {
+.left__headline,
+.mid__headline,
+.right__headline {
 	font-weight: 800;
 }
 
